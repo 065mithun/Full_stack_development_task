@@ -1,0 +1,85 @@
+<html>
+    <head>
+    <title>MY LOGIN</title>
+    </head>
+    <style>
+    .login{
+        border: 2px solid green;
+        width:340px;
+        height: 280px;
+        position:absolute;
+        top: 35%;
+        left:35%;
+        border-radius: 10px;
+        background-color:seashell;
+    }
+    .LoginButton{
+        font-size: large;
+        color: white;
+        background-color: red;
+        border:none;
+        width: 140px;
+        height: 40px;
+        border-radius:20px;
+        transition:0.5s ease;
+    }
+    .LoginButton:hover{
+        width: 140px;
+        height:40px;
+        border-radius:25px;
+        border:2px solid red;
+        color:red;
+        background-color:white;
+        transition: 0.5s ease;
+        cursor:pointer;
+    } 
+    th{
+        font-size:30px;
+        transition:0.7s ease;
+    }
+    th:hover{
+        color:red;
+        transition:0.7s ease;
+    }
+    td{
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    }
+    .user{
+        font-size:medium;
+        color:red;
+    }
+    .pass{
+        color:red;
+    }
+    .int1{
+        height:25px;
+        color:red;
+        transition: 1s ease;
+    }
+    .int1:hover{
+        border:2px solid red;
+    }
+    .int2{
+        height:25px;
+        color:red;
+        transition:1s ease;
+    }
+    int2:hover{
+        border:2px solid red;
+    }
+    </style>
+    <body>
+    
+        <div class="login">
+            <table width="50%" align="center">
+                <tr><th colspan="2">Login Page</th></tr>
+                <tr><td class="user">Username</td><td><input class="int1" type="name" placeholder="enter username.."></td></tr>
+                <tr><td class="pass">Password</td><td><input class="int2" type="password" placeholder="enter password.."></td></tr>
+                <tr><td colspan="2" align="center"><input type="submit" value="Login" class="LoginButton"></td></tr>
+            </table>
+        </div>
+    
+    </body>
+</html>

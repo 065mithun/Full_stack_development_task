@@ -1,0 +1,88 @@
+<br>
+    <head>
+        <title>My RegisterPage</title>
+
+        <style>
+            table{
+                border:2px solid green;
+                width:50%;
+                height:50%;
+                text-align:center;
+                border-top-left-radius:20px;
+                border-bottom-right-radius:20px;
+                background-color:silver;
+            }
+            th{
+                color:black;
+                transition:0.7s ease;
+                /* border:2px solid green; */
+                padding:10px 20px;
+            }
+            th:hover{
+                color:red;
+                transition:0.7s ease;
+            }
+            td{
+                color:red;
+                border:2px solid green;
+                padding: 10px 20px;
+            }
+            .btn{
+                width:140px;
+                height:40px;
+                color:white;
+                background-color:red;
+                border-radius:20px;
+                border:none;
+                transition:0.5s ease;
+            }
+            .btn:hover{
+            color:red;
+            background-color: white;
+            border:2px solid red;
+            transition:0.5s ease;
+            }
+        </style>
+    </head>
+    <br>
+    <table align="center">
+            <tr><th colspan="2"><h2>REGISTRATION PAGE</h2></th></tr>
+        
+        <tr><td><p>First name:</p></td>
+        <td><input type="name" placeholder="enter first name...." required></td></tr>
+
+        <tr><td><p>Last name:</p></td>
+        <td><input type="name" placeholder="enter last name...." required></td></tr>
+        
+        <tr><td><p>Mobile no:</p></td>
+        <td><input type="number" placeholder="enter mobile no.." required></td></tr>
+
+        <tr><td><p>DOB:</p></td>
+        <td><input type="date" required></td></tr>
+        
+        <tr><td><p>Email:</p></td>
+        <td><input type="email" placeholder="enter email...." required></td></tr>
+        
+        <tr><td><p>Password:</p></td>
+        <td><input type="password" name="password" required></td></tr>
+
+        <tr><td>Gender:</td>
+        <td><input type="radio">Male
+            <input type="radio">Female</td></tr>
+
+        <tr><td>Skills</td>
+        <td><input type="checkbox">Java 
+        <input type="checkbox">C
+        <input type="checkbox"> C++</td></tr>
+
+        <tr><td>City:</td>
+        <td><select>
+            <option>Salem</option>
+            <option>Erode</option>
+            <option>Namakkal</option>
+            <option>Madurai</option>
+        </select></td></tr>
+        <tr><th colspan="2"><input type="submit" value="Register" class="btn"></th></tr>
+    </table>
+    </body>
+</html>
