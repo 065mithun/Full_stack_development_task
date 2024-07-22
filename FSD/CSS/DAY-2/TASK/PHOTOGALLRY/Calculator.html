@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Calculater</title>
+        <style>
+            .outer{
+                border: 2px solid black;
+                width: 350px;
+                margin-left: 420px;
+                margin-top: 150px;
+                background-color:black;
+                border-radius: 30px;
+                
+            }
+            .number{
+                height: 100px;
+                width: 400px;
+                display: flex;
+                
+            }
+            .box{
+                border: 2px solid black;
+                height: 70px;
+                width: 70px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(252, 7, 7);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .box:hover{
+                border: 2px solid white;
+                height: 70px;
+                width: 70px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(55, 252, 6);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .display{
+                height: 80px;
+                width: 330px;
+                font-size:30px;
+                border: 2px solid black;
+                margin-top: 10px;
+                margin-left: 8px;
+                background-color: white;
+                border-radius:20px;
+
+            }
+            input::content{
+                font-size: 50px;
+            }
+
+        </style>
+    </head>
+    <head>
+        <div class="outer">
+            <div class="number">
+                <input type="text" class="display"></input>
+            </div>
+            <div class="number">
+                <button class="box">C</button><button class="box">%</button><button class="box">1</button><button class="box">/</button>
+            </div>
+            <div class="number">
+                <button class="box">7</button><button class="box">8</button><button class="box">9</button><button class="box">*</button>
+            </div>
+            <div class="number">
+                <button class="box">4</button><button class="box">5</button><button class="box">6</button><button class="box">-</button>
+            </div>
+            <div class="number">
+                <button class="box">1</button><button class="box">2</button><button class="box">3</button><button class="box">+</button>
+            </div>
+            <div class="number">
+                <button class="box">00</button><button class="box">0</button><button class="box">.</button><button class="box">=</button>
+            </div>
+        </div>
+    </head>
+</html>
