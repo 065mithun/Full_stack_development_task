@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>PRIME NUMBER</title>
+    </head>
+    <script>
+        function Primenumber(){
+            let num=parseInt(document.getElementById("num").value);
+            let c=0,n=0;
+            let res="";
+            for(let i=1;i<=num;i++){
+                if(num%i==0){
+                    c++;
+                }
+                if(c==2){
+                    res="It is Prime Number";
+                }
+                else{
+                    res="It is not a Prime Number";
+                }
+            } 
+
+            document.getElementById("h2").innerHTML = res;
+        }
+    </script>
+    <body>
+        Enter the number:<input type="text" id="num">
+        <br><br>
+        <button onclick="Primenumber()">Prime Number</button>
+        <br><br>
+        <h2 id="h2"></h2>
+    </body>
+</html>

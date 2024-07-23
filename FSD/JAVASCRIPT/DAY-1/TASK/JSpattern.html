@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>PATTERN</title>
+    </head>
+    <script>
+        function Pattern(){
+            let row=parseInt(document.getElementById("row").value);
+            let h2=document.getElementById("h2");
+            for(let i=0;i<row;i++){
+                for(let j=0;j<=i;j++){
+                let a=document.createElement("span");
+                a.innerHTML = "* ";
+                console.log("*");
+                h2.append(a);
+                }
+                let b=document.createElement("br");
+                h2.append(b);
+                
+            }
+
+            
+        }
+    </script>
+    <body>
+        Enter the no of row:<input type="text" id="row">
+        <br><br>
+        <button onclick="Pattern()">Pattern</button>
+        <br><br>
+        <h2 id="h2"></h2>
+    </body>
+</html>

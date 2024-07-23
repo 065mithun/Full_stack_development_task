@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>PALINDROME STRING</title>
+    </head>
+    <script>
+        function Palindrome(){
+            let str=document.getElementById("string").value;
+
+            let res="";
+            let s="";
+            let c=str.length;
+            
+            for(let i=c;i>=0;i--){
+                s+=str.charAt(i);
+            }
+            if(s==str){
+                res="The given String "+str+" is Palindrome.";
+            }
+            else{
+                res="The given String "+str+" is not Palindrome.";
+            }
+
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+    <body>
+        Enter the String:<input type="text" id="string">
+        <br><br>
+        <button onclick="Palindrome()">Palindrome</button>
+        <br><br>
+        <h2 id="result"></h2>
+    </body>
+</html>

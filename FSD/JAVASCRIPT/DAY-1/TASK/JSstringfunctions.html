@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING PATTERN</title>
+    <script>
+        function StringFunction(){
+            let str=document.getElementById("string").value;
+
+            let op=document.getElementById("op").value;
+
+            let res="";
+
+            if(op=="len"){
+                let c=str.length;
+                res= "The Length of the String is : "+c;
+            }
+            if(op=="char"){
+                let c=str.charAt(0);
+                res="1<sup>st</sup>Character of the String by CharAt is : "+c;
+            }
+            if(op=="sli"){
+                let c=str.length;
+                let s=str.slice(2,c);
+                res= "New String by using Slice is : "+s;
+            }
+            document.getElementById("h2").innerHTML = res;
+        }
+    </script>
+</head>
+<body>
+    <label for="string">Enter the String:</label>
+    <input type="text" id="string">
+    <br><br>
+    Select the Operation<select id="op">
+    <option value="len">Length</option>
+    <option value="char">CharAt</option>
+    <option value="sli">Slice</option>
+    <option value="substr">Substring</option>
+    <option value="upp">Uppercase</option>
+    <option value="low">Lower Case</option>
+    </select>
+    <br><br>
+    <button onclick="StringFunction()">String Function</button>
+    <br><br>
+    <h2 id="h2"></h2>
+</body>
+</html>

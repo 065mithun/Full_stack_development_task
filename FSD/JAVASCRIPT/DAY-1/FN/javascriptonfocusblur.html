@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>FACTORIAL</title>
+    </head>
+    <script>
+        function Factorial(){
+            let n1=parseInt(document.getElementById("n1").value);
+
+            let result=" ";
+            let fact=1;
+            for(let i=1;i<=n1;i++){
+                fact=fact*i;
+            }
+
+            result= "Factorial of the"+" "+ n1+" "+"is : "+(fact);
+
+
+            document.getElementById("Result").innerHTML=result;
+        }
+    </script>
+    <body>
+        Enter the number:<input type="text" id="n1" value="5" onfocus="this.value=''" onblur="Factorial()">
+        <br><br>
+        <div id="Result"></div>
+    </body>
+</html>
