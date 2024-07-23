@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVENTS</title>
+    <script>
+        function ONload(){
+            alert("wait for the Response.");
+        }
+        function ONcopy(){
+            document.getElementById("p").innerHTML= "You Copy my text!.....";
+        }
+    </script>
+</head>
+<body  onload="ONload()">
+    <input type="text" value="Try to Copy me" oncopy="ONcopy()">
+    <p id="p"></p>
+</body>
+</html>

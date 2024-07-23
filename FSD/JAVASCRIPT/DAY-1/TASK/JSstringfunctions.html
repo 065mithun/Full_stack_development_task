@@ -25,6 +25,47 @@
                 let s=str.slice(2,c);
                 res= "New String by using Slice is : "+s;
             }
+            if(op=="substr"){
+                let c=str.length;
+                let s=str.substring(c-1,c-3);
+                res=" Substring Function in String : "+s;
+            }
+            if(op=="upp"){
+                let s=str.toUpperCase();
+                res="The Uppercase of the given string is : "+s;
+            }
+            if(op=="low"){
+                let s=str.toLowerCase();
+                res="The Lowercase of the given string is : "+s;
+            }
+            if(op=="concat"){
+                let s=str.concat("Raj");
+                res="The Concatenation of the given string : "+s;
+            }
+            if(op=="trim"){
+                s=str.trim();
+                res="The String after trim function : "+s;
+            }
+            if(op=="trims"){
+                let s=str.trimStart();
+                res="The String after trimstart function : "+s;
+            }
+            if(op=="trime"){
+                let s=str.trimEnd();
+                res="The String after trimend function : "+s;
+            }
+            if(op=="rep"){
+                let s=str.repeat(2);
+                res="The String after repeat function : "+s;
+            }
+            if(op=="rp"){
+                let s=str.replace('i','e');
+                res="The String after replace function : "+s;
+            }
+            if(op=="rpa"){
+                let s=str.replaceAll("mithun","Sanjay");
+                res="The String after replaceall function : "+s;
+            }
             document.getElementById("h2").innerHTML = res;
         }
     </script>
@@ -40,6 +81,13 @@
     <option value="substr">Substring</option>
     <option value="upp">Uppercase</option>
     <option value="low">Lower Case</option>
+    <option value="concat">Concatenation</option>
+    <option value="trim">Trim</option>
+    <option value="trims">TrimStart</option>
+    <option value="trime">TrimEnd</option>
+    <option value="rep">Repeat</option>
+    <option value="rp">Replace</option>
+    <option value="rpa">RepaceAll</option>
     </select>
     <br><br>
     <button onclick="StringFunction()">String Function</button>
