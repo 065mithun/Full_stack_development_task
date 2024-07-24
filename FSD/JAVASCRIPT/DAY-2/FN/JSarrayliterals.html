@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT ARRAY OBJECTS</title>
+    <script>
+        function array(){
+            let skills=["C","C++","Java","Python","C#"];
+
+            document.write("Array of Elements : "+skills);
+            document.write("<br>Total no of array elements : "+skills.length);
+            document.write("<br>First Element : "+skills[0]);
+            document.write("<br>Last Element : "+skills[skills.length-1]);
+            skills.push(".NET");
+            document.write("<br>After Push one element : "+skills);
+            skills.pop();
+            document.write("<br>After Pop one element : "+skills);
+            document.write("<br>Traverse array : ");
+            for(let i=0;i<skills.length;i++){
+                document.write("<br>"+skills[i]);
+            }
+
+        }
+    </script>
+</head>
+<body onload="array()">
+
+</body>
+</html>

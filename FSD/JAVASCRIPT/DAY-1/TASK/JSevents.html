@@ -11,10 +11,32 @@
         function ONcopy(){
             document.getElementById("p").innerHTML= "You Copy my text!.....";
         }
+        function ONcut(){
+            document.getElementById("p").innerHTML = "You Cut my text!....";
+        }
+        function ONkeydown(){
+            document.getElementById("h2").innerHTML = "You pressed the key from key pad!...";
+        }
+        function ONkeyup(){
+            let x = document.getElementById("up");
+            x.value = x.value.toUpperCase();
+        }
+        function ONDB(){
+            document.getElementById("demo").innerHTML += "you Click double time!...";
+        }
     </script>
 </head>
 <body  onload="ONload()">
-    <input type="text" value="Try to Copy me" oncopy="ONcopy()">
-    <p id="p"></p>
+    <input type="text" value="Try to Copy me" oncopy="ONcopy()" oncut="ONcut()">
+    <h2 id="p"></h2>
+    <br><br>
+    <input type="text" onkeydown="ONkeydown()">
+    <h2 id="h2"></h2>
+    <br><br>
+    <input type="text" id="up" onkeyup="ONkeyup()">
+    <br><br>
+    <p ondblclick="ONDB()">My name is Mithun</p>
+    <h2 id="demo"></h2>
+
 </body>
 </html>

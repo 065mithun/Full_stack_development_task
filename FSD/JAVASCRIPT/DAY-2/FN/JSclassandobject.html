@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>JAVASCRIPT CLASS AND OBJECT</title>
+    </head>
+    <body>
+        <script>
+            class student{
+                constructor(name,age,studies){
+                    this.name=name;
+                    this.age=age;
+                    this.studies=studies;
+                }
+
+                display(){
+                    document.write("<br><br>Student Name : "+this.name);
+                    document.write("<br><br>Student Age : "+this.age);
+                    document.write("<br><br> Student Studies : "+this.studies);
+                }
+            }
+
+            var s1= new student("Mithun",21,"CSE");
+            s1.display();
+            var s2=new student("Mohan",22,"CSE");
+            s2.display();
+        </script>
+    </body>
+</html>

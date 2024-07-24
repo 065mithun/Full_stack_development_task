@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>FACTORIAL TABLE</title>
+    </head>
+    
+    <body>
+        <center>
+            Enter the Number:<input type="text" id="num" placeholder="enter number....">
+            <br><br>
+            <button onclick="factorial()">Factorial</button>
+            <br><br>
+            <h2 id="Result"></h2>
+        </center>
+        <script>
+            const factorial = () =>{
+                let n=parseInt(document.getElementById("num").value);
+
+                let res="<table border='1px' width='40%'>";
+                    res+="<tr><th>Number</th><th>Factorial</th></tr>"
+                for(let i=1;i<=n;i++){
+                    let fact=1;
+                    for(let j=1;j<=i;j++){
+                        fact=fact*j;
+                    }
+                    res+="<tr><td>"+i+"</td><td>"+fact+"</td></tr>";
+                }
+
+                document.getElementById("Result").innerHTML = res;
+            }
+        </script>
+    </body>
+</html>

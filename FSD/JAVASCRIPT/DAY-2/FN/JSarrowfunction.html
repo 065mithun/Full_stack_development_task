@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JAVASCRIPT ARROW FUNCTION</title>
+    </head>
+    <script>
+        const sum = () => 10 + 20;
+        document.write("Addition : "+ sum());
+
+        const sub = (a,b) => a-b;
+        document.write("<br><br>Subtraction : "+sub(30,10));
+
+        const mul = (a,b) => {return (a*b)};
+        document.write("<br><br>Multiplication : "+mul(20,10));
+
+        const big = (a,b) => {
+            if(a>b)
+                return a;
+            else
+                return b;
+        };
+        document.write("<br><br>Largest number: "+big(15,35));
+
+        const fact = (x) => {
+            let f=1;
+            for(let i=1;i<=x;i++){
+                f=f*i;
+            }
+            return f;
+        };
+        document.write("<br><br>Factorial of the number : "+fact(6));
+    </script>
+    <body>
+        
+
+    </body>
+</html>
