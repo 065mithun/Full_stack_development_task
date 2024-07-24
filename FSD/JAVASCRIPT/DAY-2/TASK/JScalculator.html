@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <title>Calculater</title>
+        <style>
+            .outside{
+                width:370px;
+                height:630px;
+                border:2px solid black;
+                background-color: rgba(0, 0, 0, 0.562);
+                border-radius:40px;
+                margin-left: 420px;
+                margin-top: 150px;
+            }
+            .outer{
+                border: 2px solid black;
+                width: 350px;
+                margin-left: 9px;
+                margin-top: 12px;
+                margin-bottom:20px;
+                background-color:black;
+                border-radius: 30px;
+                
+            }
+            .number{
+                height: 100px;
+                width: 400px;
+                display: flex;
+                
+            }
+            .box{
+                border: 2px solid black;
+                height: 70px;
+                width: 70px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(252, 7, 7);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .box:hover{
+                border: 2px solid white;
+                height: 70px;
+                width: 70px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(55, 252, 6);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .box1{
+                border: 2px solid black;
+                height: 70px;
+                width: 70px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(248, 252, 7);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .box1:hover{
+                border: 2px solid white;
+                height: 70px;
+                width: 70px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(55, 252, 6);
+                margin: 8px;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            .display{
+                height: 80px;
+                width: 330px;
+                font-size:30px;
+                font-family: 'poppins',sans-serif;
+                text-align: end;
+                border: 2px solid black;
+                margin-top: 10px;
+                margin-left: 8px;
+                background-color: white;
+                border-radius:20px;
+
+            }
+            input::content{
+                font-size: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="outside">
+        <div class="outer">
+            <div class="number">
+                <input type="text"  id="dis" class="display"></input>
+            </div>
+            <div class="number">
+                <button class="box1" id="clear" onclick="clr()">CLR</button><button class="box1" id="delete" onclick="del()">DEL</button><button class="box1" id="percent" onclick="percent('%')">%</button><button class="box1" id="slash" onclick="slash('/')">/</button>
+            </div>
+            <div class="number">
+                <button class="box" id="seven" onclick="VII(7)">7</button><button class="box" id="eight" onclick="VIII(8)" >8</button><button class="box" id="nine" onclick="IX(9)">9</button><button class="box1" id="star" onclick="star('*')">*</button>
+            </div>
+            <div class="number">
+                <button class="box" id="four" onclick="IV(4)">4</button><button class="box" id="five" onclick="V(5)">5</button><button class="box" id="six" onclick="VI(6)">6</button><button class="box1" id="minus" onclick="minus('-')">-</button>
+            </div>
+            <div class="number">
+                <button class="box" id="one" onclick="I(1)">1</button><button class="box" id="two" onclick="II(2)">2</button><button class="box" id="three" onclick="III(3)">3</button><button class="box1" id="plus" onclick="plus('+')">+</button>
+            </div>
+            <div class="number">
+                <button class="box" onclick="dzero('00')">00</button><button class="box" onclick="zero(0)">0</button><button class="box" onclick="dot('.')">.</button><button class="box1" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+        <script >
+            let x=document.getElementById("dis"); 
+            function I(y){
+                x.value+= y;
+            }
+            function II(y){
+                x.value+= y;
+            }
+            function III(y){
+                x.value +=y;
+            }
+            function IV(y){
+                x.value +=y;
+            }
+            function V(y){
+                x.value +=y;
+            }
+            function VI(y){
+                x.value +=y;
+            }
+            function VII(y){
+                x.value +=y;
+            }
+            function VIII(y){
+                x.value +=y;
+            }
+            function IX(y){
+                x.value +=y;
+            }
+            function clr(){
+                x.value ="";
+            }
+            function del(){
+                x.value=x.value.substring(0,(x.value.length-1)); 
+            }
+            function dot(y){
+                x.value +=y;
+            }
+            function plus(y){
+                x.value += y;
+            }
+            function minus(y){
+                x.value +=y;
+            }
+            function star(y){
+                x.value +=y;
+            }
+            function slash(y){
+                x.value+=y;
+            }
+            function percent(y){
+                x.value+=y;
+            }
+            function zero(y){
+                x.value+=y;
+            }
+            function dzero(y){
+                x.value +=y;
+            }
+
+            function calculate(){
+                try{
+                    x.value=eval(x.value);
+                }
+                catch(e){
+                    x.value="ERROR";
+                }
+            }
+        </script>
+    </body>
+</html>
