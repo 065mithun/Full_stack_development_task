@@ -1,0 +1,35 @@
+<h1>Welcome to Angular</h1>
+
+<br>
+
+<app-my-component></app-my-component>
+<br>
+
+<h1>Interpolation Example</h1>
+
+<b>
+  Nmae : {{name}}
+  <br> Age : {{age}}
+  <br> Email : <input type="text" value="{{email}}">
+  <br>
+</b>
+<h1>Porperty Binding Example</h1>
+
+Name : <input type="text" [value]="name">
+<br>
+Age : <input type="text" [value]="age">
+<br>
+Email : <input type="text" [value]="email">
+<br>
+
+<h1>Event Binding Examples</h1>
+<button (click)="Changename()">button</button>
+<br>
+<button (click)="Changeage()">btn2</button>
+<br>
+<button (click)="Changeemail()">btn3</button>
+<br>
+<h1>Image Path</h1>
+<img [src]="img" alt="" width="300" height="300">
+<br><br>
+<button (click)="Changeimage()">Changeimage</button>
