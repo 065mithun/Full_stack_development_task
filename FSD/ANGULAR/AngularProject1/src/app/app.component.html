@@ -33,3 +33,42 @@ Email : <input type="text" [value]="email">
 <img [src]="img" alt="" width="300" height="300">
 <br><br>
 <button (click)="Changeimage()">Changeimage</button>
+
+<br>
+<h1>Two Data Binding</h1>
+<br>
+<input type="text" [(ngModel)]="fname">
+<br>
+<p>Welcome {{fname}}</p>
+<br>
+
+<h1 [ngClass]="MyClass">Structure and Attribute directives</h1>
+<br>
+<button (click)="ChangeClass()">Change Class</button>
+<br><br>
+<button (click)="ChangeFlag()">Show and Hide div</button>
+
+<br>
+<br>
+<div *ngIf="flag" [ngStyle]="Mystyle">
+  <br>
+
+  <ul>
+    <li *ngFor="let vec of vehicle" (click)="setSelectedItem(vec)">{{vec}}</li>
+  </ul>
+  <br>
+  <br>
+  <b>You have Selected : {{selectedvec}}</b>
+  <br>
+  <div [ngSwitch]="selectedvec">
+    <font color="green" *ngSwitchCase="'Twowheeler'">Bike</font>
+    <font color="green" *ngSwitchCase="'Threewheeler'">Auto</font>
+    <font color="green" *ngSwitchCase="'FourWheeler'">Car</font>
+    <font color="green" *ngSwitchDefault>Invalid</font>
+  </div>
+  <br>
+  <br>
+  <button (click)="ChangeStyle()">Change Style</button>
+</div>
+
+
