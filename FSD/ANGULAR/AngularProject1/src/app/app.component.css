@@ -4,3 +4,10 @@
 .Myclass2{
     color:red;
 }
+
+table th{
+    text-transform:uppercase;
+    color: azure;
+    background-color: salmon;
+    text-decoration: none;
+}

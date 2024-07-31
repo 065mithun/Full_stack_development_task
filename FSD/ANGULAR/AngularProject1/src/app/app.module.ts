@@ -5,19 +5,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import {RouterModule , Routes} from '@angular/router';
+import { CalculatorService } from './calculator.service';
+const ROUTES: Routes = [
+  {path : 'home', component : HomeComponent},
+  {path : 'contact', component : ContactComponent},
+  {path : 'about', component : AboutComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent
+    MyComponentComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    CalculatorService
   ],
   bootstrap: [AppComponent]
 })
