@@ -9,19 +9,11 @@
     flex-direction: column;
     background-color: white;
 }
-.details:hover{
-    border:3px solid #08eeee;
-    border-color: #08eeee;
-}
 label{
     color:red;
     margin-right:60%;
     
 } 
-label:hover{
-    color:#08eeee;
-}
-
 input{
     width:70%;
     height:30px;
@@ -35,13 +27,10 @@ input:hover{
 h2{
     color:red;
 }
-h2:hover{
-    color:#08eeee;
-}
 .btn{
     display:flex;
-    width:50%;
-    justify-content: space-between;
+    width:70%;
+    justify-content: space-around;
 }
 button{
     color:white;
@@ -53,6 +42,12 @@ button{
 }
 button:hover{
     color:white;
-    background-color:#08eeee;
     box-shadow: 7px 7px black;
+}
+
+.btn-2{
+    margin-top:2%;
+    display:flex;
+    width:50%;
+    justify-content: space-around;
 }

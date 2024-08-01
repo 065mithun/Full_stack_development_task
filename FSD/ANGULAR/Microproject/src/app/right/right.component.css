@@ -12,11 +12,6 @@
 hr{
     color:black;
 }
-.display:hover{
-    color:#08eeee;
-    border:3px solid #08eeee;
-    border-color: #08eeee;
-}
 .point{
     display: flex; 
     justify-content:center;
