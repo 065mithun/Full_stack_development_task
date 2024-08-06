@@ -1,0 +1,39 @@
+                                      SQL - COMMANDS(ORACLE)
+
+  CREATE THE TABLE:
+  create table tbl_employee(eid number(5),ename varchar2(20),esalary number(7));
+  INSERT THE VALUES IN TABLE:
+  insert into tbl_employee values(65,'Mithun',60000);
+  insert into tbl_employee values(66,'Mohan',20000);
+  insert into tbl_employee values(67,'MohanRaj',5000);
+  insert into tbl_employee values(68,'MohanaMurali',55000);
+
+  select *from tbl_employee;--->DISPLAY THE RECORDS OF THE TABLE
+
+  select eid,esalary from tbl_employee;---> DISPLAY SPECIFIC COLUMNS IN THE TABLE
+
+
+  insert into tbl_employee values(66,'Mohan',20000);
+
+  select distinct *from tbl_employee;---> DISPLAY THE TABLE BY USING DISTINCT KEYWORD TO ELIMINATE DUPLICATE
+
+
+  select *from tbl_employee where eid=65;
+
+  select *from tbl_employee where esalary > 20000;
+
+  select *from tbl_employee where esalary <> 20000;
+
+  select *from tbl_employee where esalary != 20000;
+
+  update tbl_employee set eid=99 where ename='Mohan';---->UPDATE OR MODIFY THE RECORDS IN THE TABLE
+
+  select *from tbl_employee;
+
+  update tbl_employee set eid=999,ename='sawmy' where eid=67;
+
+  select *from tbl_employee;
+
+  delete from tbl_employee where eid=999;---->DELETE THE RECORDS FROM THE TABLE
+
+  select *from tbl_employee;
