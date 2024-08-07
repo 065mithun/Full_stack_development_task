@@ -1,0 +1,97 @@
+create table tbl_emploee(eid number(5), ename varchar2(20), esalary number(10));
+
+desc tbl_emploee;
+
+
+insert into tbl_emploee values(65,'Mithun',50000);
+
+insert into tbl_emploee values(6,'Mohan',15000);
+
+insert into tbl_emploee values(67,'MohanRaj',10000);
+
+insert into tbl_emploee values(68,'MohanaMurali',50000);
+
+insert into tbl_emploee values(65,'Mithun',50000);
+
+insert into tbl_emploee values(64,'Meialazhan',60000);
+
+insert into tbl_emploee values(79,'Praven Nayagam',60000);
+
+
+select *from tbl_emploee;
+
+select *from tbl_emploee where eid in (65 ,64,6,79);
+
+select *from tbl_emploee where eid not in (65 ,64,6,79);
+
+select *from tbl_emploee where esalary between 20000 and 50000;
+
+select *from tbl_emploee where esalary not between 20000 and 50000;
+
+select *from tbl_emploee where eid in (65,64,6) and esalary > 10000;
+
+select *from tbl_emploee where eid in (65,64,6) or esalary > 20000;
+
+select *from tbl_emploee where eid >65 and esalary <50000;
+
+select *from tbl_emploee where eid > 65 or esalary <10000;
+
+insert into tbl_emploee (eid,esalary) values (70,30000);
+
+insert into tbl_emploee (ename,esalary) values ('Moulesh',20000);
+
+select *from tbl_emploee;
+
+select *from tbl_emploee where ename is null;
+
+select *from tbl_emploee where ename is not null;
+
+select *from tbl_emploee where ename like '_o%';
+
+select *from tbl_emploee where ename like '__h%';
+
+select *from tbl_emploee where ename like '%n';
+
+select *from tbl_emploee where ename like '%a%';
+
+select *from tbl_emploee where ename not like '%a%';
+
+select *from tbl_emploee order by eid desc;
+
+select *from tbl_emploee order by ename desc;
+
+select *from tbl_emploee order by esalary desc;
+
+alter table tbl_emploee add doj date;
+
+select *from tbl_emploee;
+
+update tbl_emploee set doj=sysdate where eid = 65;
+
+select *from tbl_emploee;
+
+update tbl_emploee set doj=sysdate where eid in (64,65,6,79,68);
+
+update tbl_emploee set doj=sysdate where eid not in (64,65,6,79,68);
+
+alter table tbl_emploee drop column doj;
+
+select *from tbl_emploee;
+
+alter table tbl_emploee modify esalary number(12);
+
+desc tbl_emploee;
+
+alter table tbl_emploee rename to table_employee;
+
+desc table_employee;
+
+alter table table_employee rename column eid to employee_id;
+
+alter table table_employee rename column ename to employee_name;
+
+alter table table_employee rename column esalary to employee_salary;
+
+rename table_employee to employee;
+
+desc employee;
