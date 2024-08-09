@@ -1,0 +1,89 @@
+create table tbl_emploee(eid number(5), ename varchar2(20), esalary number(10), D_no number(5));
+
+desc tbl_emploee;
+
+
+insert into tbl_emploee values(65,'Mithun',50000,10);
+
+insert into tbl_emploee values(66,'Mohan',15000,10);
+
+insert into tbl_emploee values(67,'MohanRaj',10000,20);
+
+insert into tbl_emploee values(68,'MohanaMurali',50000,20);
+
+insert into tbl_emploee values(64,'Meialazhan',60000,30);
+
+insert into tbl_emploee values(79,'Praven Nayagam',60000,30);
+
+insert into tbl_emploee (eid,esalary,D_no) values(70,40000,40);
+
+
+select *from tbl_emploee;
+
+
+select D_no , count(*) from tbl_emploee group by D_no;
+
+select D_no , count(*), sum(esalary), avg(esalary), max(esalary), min(esalary) from tbl_emploee group by D_no;
+
+
+select D_no , count(*), sum(esalary), avg(esalary), max(esalary), min(esalary) from tbl_emploee group by D_no order by D_no;
+
+select D_no , count(*), sum(esalary), avg(esalary), max(esalary), min(esalary) from tbl_emploee group by D_no having max(esalary)<50000 order by D_no;
+
+select D_no , count(*), sum(esalary), avg(esalary), max(esalary), min(esalary) from tbl_emploee group by D_no having min(esalary)>50000 order by D_no;
+
+
+create view Myview as select *from tbl_emploee where D_no= 10;
+
+select *from Myview;
+
+create view viewem as select *from tbl_emploee where  eid =65;
+
+select *from viewem;
+
+update Myview set esalary= 25000 where eid = 66;
+
+delete from Myview where eid =66;
+
+drop view Myview;
+
+select eid as "Employee_Id", ename "Employee_Name" from tbl_emploee;
+
+
+select D_no , count(*) as "Total no of Employees" from tbl_emploee group by D_no;
+
+create table tbl_stud (reg_no number(10) primary key, stud_name varchar2(20) not null, stud_email varchar2(25) unique, stud_age number(5) check(stud_age > 0), stud_location varchar2(15) default 'Salem');
+
+
+insert into tbl_stud values (65,'mithun','mithunk@gmail.com',20,'Erode');
+
+insert into tbl_stud values (66,'mithun','mohan@gmail.com',20,'Erode');
+
+insert into tbl_stud (reg_no,stud_name,stud_email,stud_age) values (85,'Ranjith','ranjith@mail.com',19);
+
+select *from  tbl_stud;
+
+
+create table department (dno number(5) primary key, dname varchar2(20));
+
+
+create table emploee (eid number(5) primary key, ename varchar2(20), esalary number(10), dno number(5), foreign key (dno) references department(dno));
+
+
+insert into department values (10,'CSE');
+
+insert into department values (20,'IT');
+
+insert into emploee values (64,'Meiyalazhan',60000,10);
+
+insert into emploee values (65,'Mithun',50000,10);
+
+insert into emploee values (66,'Mohan',20000,10);
+
+insert into emploee values (67,'MohanRaj',10000,20);
+
+insert into emploee values (68,'MohanaMuali',45000,20);
+
+insert into emploee values (79,'Praveen Nayagam',55000,20);
+
+select *from emploee;
