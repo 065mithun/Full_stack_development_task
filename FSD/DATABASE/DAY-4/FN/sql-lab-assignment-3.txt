@@ -1,0 +1,60 @@
+create table agents (agent_id number(5), agent_code varchar2(10), agent_name varchar(20), working_area varchar2(10));
+
+insert into agents values (1,'A101','agent1','chennai');
+
+insert into agents values (2,'A102','agent2','chennai');
+
+insert into agents values (3,'A103','agent3','Bangalore');
+
+insert into agents values (4,'A104','agent4','Bangalore');
+
+insert into agents values (5,'A105','agent5','New York');
+
+select *from agents;
+
+
+create table customers (customer_id number(5), customer_code varchar2(10), customer_name varchar2(20), customer_area varchar2(20));
+
+insert into customers values (1,'C101','customer1','chennai');
+
+insert into customers values (2,'C102','customer2','chennai');
+
+insert into customers values (3,'C103','customer3','chennai');
+
+insert into customers values (4,'C104','customer4','Bangalore');
+
+insert into customers values (5,'C105','customer5','Bangalore');
+
+insert into customers values (6,'C106','customer6','Delhi');
+
+select *from customers;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area = customers.customer_area;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area <> customers.customer_area;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area > customers.customer_area;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area >= customers.customer_area;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area < customers.customer_area;
+
+select agents.agent_name, customers.customer_name, customers.customer_area from agents join customers on agents.working_area <= customers.customer_area;
+
+select *from agents left outer join customers on agents.working_area = customers.customer_area;
+
+select *from agents right outer join customers on agents.working_area = customers.customer_area;
+
+select *from agents full outer join customers on agents.working_area = customers.customer_area;
+
+select *from agents, customers where agents.working_area = customers.customer_area(+);
+
+select *from agents, customers where agents.working_area(+) = customers.customer_area;
+
+select a.agent_code, b.agent_name from agents a, agents b where a.working_area = b.working_area;
+
+select *from customers where customer_area = (select working_area from agents where agent_code = 'A101');
+
+select *from customers where customer_area = (select working_area from agents where agent_code = 'A104');
+
+select *from customers where customer_area in (select working_area from agents where agent_code = 'A101' or agent_code = 'A104');
